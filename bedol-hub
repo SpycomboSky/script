@@ -1,1 +1,39 @@
+--- military tycoon by spycombosky ---
 
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("Military Tycoons Script","BloodTheme")
+
+---Tabs
+
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("player")
+local Tab2 = window:NewTab("J20 part")
+local Tab2Section = Tab2:NewSection("J20 part")
+
+---Buttons
+
+Tab1Section:NewButton("auto collect","comming soon",function()
+_G.Orbs = true
+_G.Lootbags = true
+
+while wait(1) do
+    if _G.Orbs == true then
+   local Children = game:GetService("Workspace")["__THINGS"].Orbs:GetChildren()
+local player = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+for i = 1, #Children do
+    local child = Children[i]
+    child.Position = player
+end
+end
+    if _G.Lootbags == true then
+   local Children = game:GetService("Workspace")["__THINGS"].Lootbags:GetChildren()
+local player = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+for i = 1, #Children do
+    local child = Children[i]
+    child.Position = player
+end
+end  
+end
+end)
